@@ -13,6 +13,7 @@ class Worker {
     this.gzip = options.gzip;
     this.host = options.host;
     this.port = options.port;
+    this.html = options.html;
     this.username = options.username;
     this.password = options.password;
     this.beforeMiddleware = options.beforeMiddleware;
@@ -71,14 +72,17 @@ class Worker {
   }
 
   buildMiddleware() {
+    console.log('buildMiddleware', this.html);
     this.fastboot = new FastBoot({
       distPath: this.distPath,
       sandboxGlobals: this.sandboxGlobals,
+      html: this.html,
     });
 
     return fastbootMiddleware({
       fastboot: this.fastboot,
       chunkedResponse: this.chunkedResponse,
+      html: this.html,
     });
   }
 

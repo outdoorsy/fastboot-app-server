@@ -32,6 +32,7 @@
     "fastboot": "^1.1.4-beta.1",
     "fastboot-express-middleware": "^1.1.1",
     "fs-promise": "^2.0.3",
+    "moment-timezone": "^0.5.21",
     "request": "^2.81.0"
   },
   "devDependencies": {

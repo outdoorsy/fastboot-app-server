@@ -18,6 +18,7 @@ class FastBootAppServer {
     this.gzip = options.gzip;
     this.host = options.host;
     this.port = options.port;
+    this.html= options.html;
     this.username = options.username;
     this.password = options.password;
     this.httpServer = options.httpServer;
@@ -41,6 +42,7 @@ class FastBootAppServer {
         gzip: this.gzip,
         host: this.host,
         port: this.port,
+        html: this.html,
         username: this.username,
         password: this.password,
         httpServer: this.httpServer,
