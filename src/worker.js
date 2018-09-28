@@ -72,11 +72,9 @@ class Worker {
   }
 
   buildMiddleware() {
-    console.log('buildMiddleware', this.html);
     this.fastboot = new FastBoot({
       distPath: this.distPath,
       sandboxGlobals: this.sandboxGlobals,
-      html: this.html,
     });
 
     return fastbootMiddleware({
